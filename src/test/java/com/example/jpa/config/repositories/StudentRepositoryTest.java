@@ -7,6 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
 import java.util.List;
+import org.junit.Assert;
+
 
 import static org.junit.Assert.assertEquals;
 @SpringBootTest
