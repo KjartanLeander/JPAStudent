@@ -20,6 +20,7 @@ public class StudentRestController {
     }
     @GetMapping("students/{name}")
     public List<Student> getallstudentsbyname(@PathVariable String name) {
+        System.out.println("yo");
         return studentRepository.findAllByName(name);
     }
 }
