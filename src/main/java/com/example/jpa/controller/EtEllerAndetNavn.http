@@ -1,0 +1,6 @@
+GET http://localhost:8081/students/Tim
+Accept: application/json
+
+###
+http://localhost:8081/students
+
