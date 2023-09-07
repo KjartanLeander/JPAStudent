@@ -2,6 +2,7 @@ package com.example.jpa.config.repositories;
 
 import com.example.jpa.model.Student;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,6 +18,16 @@ import static org.junit.Assert.assertEquals;
 
 class StudentRepositoryTest {
 @Autowired StudentRepository studentRepository;
+
+
+
+@BeforeEach
+void setup(){
+    Student std = new Student();
+    std.setName("Tim");
+    studentRepository.save(std);
+}
+
 @Test
     void testOneTim(){
     List<Student>lst=studentRepository.findAllByName("Tim");
