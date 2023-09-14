@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 public class StudentRestController {
-   @Autowired
+    @Autowired
     private StudentRepository studentRepository;
     @GetMapping("/students")
     public List<Student> students() {
